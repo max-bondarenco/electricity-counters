@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: x-large;
+    font-family: 'Madimi One', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.loader-box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 20%;
+    aspect-ratio: 1;
+    display: grid;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    grid-area: 1/1;
+    margin: 0 0 15px 15px;
+    --c: #0000 calc(100% / 3), #046d8b 0 calc(2 * 100% / 3), #0000 0;
+    --c1: linear-gradient(90deg, var(--c));
+    --c2: linear-gradient(0deg, var(--c));
+    background: var(--c1), var(--c2), var(--c1), var(--c2);
+    background-size: 300% 4px, 4px 300%;
+    background-repeat: no-repeat;
+    animation: l12 1s infinite linear;
+}
+.loader:after {
+    margin: 15px 15px 0 0;
+    transform: scale(-1, -1);
+}
+@keyframes l12 {
+    0% {
+        background-position: 50% 0, 100% 100%, 0 100%, 0 0;
+    }
+    25% {
+        background-position: 0 0, 100% 50%, 0 100%, 0 0;
+    }
+    50% {
+        background-position: 0 0, 100% 0, 50% 100%, 0 0;
+    }
+    75% {
+        background-position: 0 0, 100% 0, 100% 100%, 0 50%;
+    }
+    75.01% {
+        background-position: 100% 0, 100% 0, 100% 100%, 0 50%;
+    }
+    100% {
+        background-position: 50% 0, 100% 0, 100% 100%, 0 100%;
+    }
+}
+
+input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+main {
+    padding: 10px;
+    background: rgb(175, 175, 147);
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: white;
+}
+
+header {
+    z-index: 1;
+    background: rgb(129, 129, 93);
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+        padding: 10px;
+    }
+
+    a.active {
+        text-decoration: none;
+        color: wheat;
+    }
+}
+
+.new-counter-page,
+.new-reading-page {
+    display: flex;
+    justify-content: center;
+
+    form {
+        margin-top: 100px;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+
+        input,
+        select,
+        option {
+            text-align: center;
+            border-radius: 30px;
+            background-color: rgb(212, 198, 198);
+        }
+
+        select:focus,
+        input:focus {
+            outline: none;
+            background-color: white;
+        }
+
+        button {
+            background: wheat;
+            border-radius: 30px;
+        }
+
+        button:hover,
+        button:active {
+            background: rgb(216, 196, 158);
+            cursor: pointer;
+        }
+
+        h1 {
+            align-self: center;
+            font-size: larger;
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+
+.history-container {
+    width: 100%;
+}
+
+.counters,
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history h1 {
+    align-self: center;
+    font-size: larger;
+}
+
+.counter,
+.history-item {
+    border: 3px solid black;
+    background: rgb(129, 129, 93);
+}
+
+.counter__name,
+.history-item__cost {
+    font-weight: bold;
+}
+
+.counter__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 5px;
+}
+
+.history-item__info {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 5px;
+}
+
+.controls {
+    padding-bottom: 10px;
+    text-align: center;
+
+    svg {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+.counter-details-page {
+    display: flex;
+    gap: 50px;
+}
+
+.counter-details-form {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+    div {
+        display: flex;
+
+        label {
+            width: 170px;
+        }
+
+        input {
+            text-align: center;
+            border-radius: 30px;
+            background-color: rgb(212, 198, 198);
+        }
+
+        input:focus {
+            outline: none;
+            background-color: white;
+        }
+    }
+
+    button {
+        background: wheat;
+        border-radius: 30px;
+        width: 100%;
+    }
+
+    button:hover,
+    button:active {
+        background: rgb(216, 196, 158);
+        cursor: pointer;
+    }
+
+    h1 {
+        align-self: center;
+        font-size: larger;
+    }
+}
