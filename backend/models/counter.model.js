@@ -43,7 +43,7 @@ counterSchema.post('save', async function (doc, next) {
 })
 
 counterSchema.post('findOneAndDelete', async function (doc, next) {
-    await Reading.deleteMany({ counter_id: doc._id })
+    if (doc) await Reading.deleteMany({ counter_id: doc._id })
     next()
 })
 
