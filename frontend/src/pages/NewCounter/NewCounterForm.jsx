@@ -50,7 +50,7 @@ const NewCounterForm = () => {
                 min="0"
                 step="0.01"
                 name="tariff_day"
-                placeholder="Day Tariff"
+                placeholder="Day Tariff, uah/kW"
                 required
             />
             <input
@@ -60,7 +60,7 @@ const NewCounterForm = () => {
                 min="0"
                 step="0.01"
                 name="penalty_day"
-                placeholder="Day penalty"
+                placeholder="Day penalty, kW"
                 required
             />
             <input
@@ -70,7 +70,7 @@ const NewCounterForm = () => {
                 min="0"
                 step="0.01"
                 name="tariff_night"
-                placeholder="Night Tariff"
+                placeholder="Night Tariff, uah/kW"
                 required
             />
             <input
@@ -80,7 +80,7 @@ const NewCounterForm = () => {
                 min="0"
                 step="0.01"
                 name="penalty_night"
-                placeholder="Night penalty"
+                placeholder="Night penalty, kW"
                 required
             />
             <button>Create Counter</button>

@@ -50,7 +50,7 @@ const ReadingForm = () => {
                 min="0"
                 step="0.01"
                 name="energy_day"
-                placeholder="Day Energy"
+                placeholder="Day Energy, kW"
                 required
             />
             <input
@@ -60,7 +60,7 @@ const ReadingForm = () => {
                 min="0"
                 step="0.01"
                 name="energy_night"
-                placeholder="Night Energy"
+                placeholder="Night Energy, kW"
                 required
             />
             <button>Send Readings</button>

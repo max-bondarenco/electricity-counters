@@ -78,7 +78,7 @@ const UpdateCounterForm = ({ counter }) => {
                 />
             </div>
             <div>
-                <label htmlFor="tariff_day">Day Tariff:</label>
+                <label htmlFor="tariff_day">Day Tariff, uah/kW:</label>
                 <input
                     id="tariff_day"
                     autoComplete="off"
@@ -92,7 +92,7 @@ const UpdateCounterForm = ({ counter }) => {
                 />
             </div>
             <div>
-                <label htmlFor="penalty_day">Day penalty:</label>
+                <label htmlFor="penalty_day">Day penalty, kW:</label>
                 <input
                     id="penalty_day"
                     autoComplete="off"
@@ -106,7 +106,7 @@ const UpdateCounterForm = ({ counter }) => {
                 />
             </div>
             <div>
-                <label htmlFor="tariff_night">Night Tariff:</label>
+                <label htmlFor="tariff_night">Night Tariff, uah/kW:</label>
                 <input
                     id="tariff_night"
                     autoComplete="off"
@@ -120,7 +120,7 @@ const UpdateCounterForm = ({ counter }) => {
                 />
             </div>
             <div>
-                <label htmlFor="penalty_night">Night penalty:</label>
+                <label htmlFor="penalty_night">Night penalty, kW:</label>
                 <input
                     id="penalty_night"
                     autoComplete="off"
